@@ -1,27 +1,54 @@
-# Movies
+# Prueba técnica Frontend Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+**Planteamiento del problema**
 
-## Development server
+Se pide implementar una aplicación Angular para evaluar las competencias técnicas del candidato para los puestos de _Desarrollador Frontend del Departamento de Tecnología de Gesthispania_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Partiendo de la [versión 3 de la API de TheMovieDatabase](https://developers.themoviedb.org/3/getting-started/introduction), construye una aplicación Angular que realice las siguientes funcionalidades:
 
-## Code scaffolding
+- Realizar una SPA que contenga un formulario de búsqueda por palabra
+  de películas. Los resultados de la búsqueda deben incluir el título,
+  el cartel de la película, los géneros cinematográficos y la fecha de
+  estreno. Se deberán paginar los resultados y mostrarlos en español  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Desde los resultados de la búsqueda de películas, se tendrá que
+  acceder a la ficha de la película en otra ruta del SPA. Esta página
+  deberá contener el título en español, el título original, la
+  valoración, los géneros cinematográficos, la lista de actores y
+  actrices que intervienen en la película y el director
 
-## Build
+- La ficha de la película deberá tener un formulario con una caja de texto en la que
+  el usuario pueda aportar su crítica y un desplegable con su
+  valoración de 0 a 10 y un botón para enviar. Estos datos se guardarán en almacenamiento local
+  del navegador y aparecerá en la parte inferior de la ficha de
+  película cada vez que se entre a esa ficha. Esa información se podrá
+  modificar si el usuario vuelve a entrar a la página y cambia el texto y la valoración
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- En la ficha de la película se deberá incluir
+  un botón para añadirla a favoritas y quitar de favoritas para la que
+  también se utilizará localStorage
 
-## Running unit tests
+- Se realizará una vista en la que se listarán las películas marcadas como favoritas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Se realizará otra vista con el top 10 de películas a las que se ha hecho una
+  valoración, ordenándolas de mayor a menor
 
-## Running end-to-end tests
+**Requerimientos**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Asegúrate de tener instalado _Node_ y _NPM_
+- Debes tener cuenta en _Github_
+- Tendrás que solicitar una API key: https://www.themoviedb.org/signup
+- Se valorará el uso de `Observables` y/o `Promises` en la declaración de los servicios
+- Se valorará el uso de algún framework CSS como _Bootstrap_ y de alguna librería de iconos para mejorar el look&feel como _FontAwesome_
+- Si en lugar de utilizar `localStorage` para guardar las críticas, valoraciones y favoritas prefieres utilizar otro servicio, como _Firebase_ o _Amplify_ puedes hacerlo y será valorado
 
-## Further help
+**Desarrollo y entrega**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Debes realizar un `Fork` del repositorio https://github.com/juancalero/PruebaFront
+- Clonar el fork a su máquina local `git clone git@github.com:USERNAME/FORKED-PROJECT.git`
+- Crear un `branch` en tu cuenta de GitHub utilizando su nombre completo
+- A partir de ahí, puedes comenzar a realizar la solución al problema
+- Una vez finalices, haz un `Commit` del proyecto y envía un `Pull Request` del branch con tu nombre, y notificar a la dirección de correo electrónico juan.calero@gesthispania.com
+- Puedes entregar la solución mediante un zip o un rar a través de _WeTransfer_ de forma alternativa
+- Recuerda que no debe incluirse la carpeta `node_modules`
+- Comprueba que el proyecto debe ser instalable con el comando `npm install` y levantado con el comando `npm start`. En caso que se cree algún script de inicio en `package.json,` indicar el correcto
