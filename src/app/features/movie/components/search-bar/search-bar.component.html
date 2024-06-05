@@ -1,0 +1,16 @@
+<form>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <input
+        [(ngModel)]="query"
+        name="query"
+        type="text"
+        class="form-control"
+        id="searchInput"
+        aria-label="Film title"
+        aria-describedby="filmHelp"
+      />
+      <div id="filmHelp" class="form-text">Qué quieres ver hoy?</div>
+    </div>
+  </form>
+</form>

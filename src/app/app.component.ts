@@ -1,22 +1,13 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCab } from '@fortawesome/free-solid-svg-icons';
+import { SearchBarComponent } from './features/movie/components/search-bar/search-bar.component';
+import { MovieListComponent } from './features/movie/components/movie-list/movie-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FontAwesomeModule],
+  imports: [RouterOutlet, SearchBarComponent, MovieListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  facab = faCab;
-
-  constructor(private http: HttpClient) {
-    this.http.get('https://api.themoviedb.org/3/movie/11').subscribe((res) => {
-      console.log(res);
-    });
-  }
-}
+export class AppComponent {}
