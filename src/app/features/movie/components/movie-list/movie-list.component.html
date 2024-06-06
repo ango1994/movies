@@ -1,5 +1,5 @@
 <ul class="list-group">
-  @for (item of movies; track $index) {
-  <li>{{ item.original_title }}</li>
+  @for (movie of movies; track $index) {
+  <app-movie-card [movie]="movie"></app-movie-card>
   }
 </ul>

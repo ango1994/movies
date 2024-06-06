@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { Movie } from '../interfaces/movie';
 import { Search } from '../interfaces/search';
 
@@ -9,7 +9,7 @@ import { Search } from '../interfaces/search';
 })
 export class MovieService {
   apiUrl = 'https://api.themoviedb.org/3';
-  private searchResult = new Subject<Array<Movie>>();
+  private searchResult = new BehaviorSubject<Array<Movie>>([]);
   searchResult$ = this.searchResult.asObservable();
   constructor(private http: HttpClient) {}
 

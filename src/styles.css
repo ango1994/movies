@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #14181c;
+  color: white;
+  font-family: "Montserrat", Geneva, Tahoma, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+}
