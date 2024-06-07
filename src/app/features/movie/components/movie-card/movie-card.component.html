@@ -10,9 +10,11 @@
       <h2>{{ movie.title }}</h2>
       <p>{{ movie.release_date | year }}</p>
     </div>
+
     <div class="movie-card-genres">
-      <p>Action</p>
-      <p>Drama</p>
+      @for (genre of movie.genres; track $index){
+      <p>{{ genre }}</p>
+      }
     </div>
   </div>
 </li>
