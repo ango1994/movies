@@ -26,3 +26,9 @@
   display: flex;
   gap: 10px;
 }
+
+img {
+  width: 92px;
+  height: 138px;
+  object-fit: cover;
+}
